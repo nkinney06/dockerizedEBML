@@ -1,0 +1,65 @@
+
+This is supplementary material for the paper:
+
+ETHNICALLY BIASED MICROSATELITES CONTRIBUTE TO DIFFERENTIAL GENE EXPRESSION AND GLUTATHIONE METABOLISM IN HUMAN POPULATIONS
+contact the corresponding author for questions
+
+NOTE: if you have downloaded this directory from the Journal's supplmentary material you need to download all five
+      supplementary datasets and put them in the data directory first
+
+	  
+Whats in this directory:
+
+DockerizedEBML/
+├── data
+│   ├── fig5.png
+│   ├── fig6.png
+│   ├── S1_Dataset.7z
+│   ├── S2_Dataset.txt
+│   ├── S3_Dataset.txt
+│   ├── S4_Dataset.txt
+│   └── S5_Dataset.7z
+├── docker
+│   └── jupyter
+│       └── Dockerfile
+├── docker-compose.yml
+├── ipynb
+│   ├── figure_1.ipynb
+│   ├── figure_2.ipynb
+│   ├── figure_3.ipynb
+│   ├── figure_4.ipynb
+│   ├── figure_5.ipynb
+│   ├── figure_6.ipynb
+│   └── figure_7.ipynb
+├── lib
+│   ├── __init__.py
+│   ├── pcaFunctions.R
+│   └── ReedModel.py
+└── README
+
+
+To start the Jupyter Notebook:
+
+1. extract the two compressed datasets
+   7z e S1_Dataset.7z
+   7z e S5_Dataset.7z
+
+   
+2. build the docker images: (this could take awhile)
+   sudo docker-compose build
+
+
+3. start the docker container
+   sudo docker-compose up -d
+
+   
+4. check where the server is running
+   sudo docker-compose exec this_jupyter jupyter notebook list
+
+   Currently running servers:
+   http://0.0.0.0:8888/?token=363bc0d927d9f84f610158a4bee50b52bb96d6exxxxxxxxx :: /home/jovyan
+
+   
+5. point browser to server:
+   replace 0.0.0.0 with your ip address
+   
